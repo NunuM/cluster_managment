@@ -34,7 +34,7 @@ class Server(port:Int,hostname:String) extends JsonSupport {
   // needed for the future map/flatmap in the end
   implicit val executionContext = system.dispatcher
 
-  val password: Array[Char] = "zion100%safefrommatrix".toCharArray // do not store passwords in code, read them from somewhere safe!
+  val password: Array[Char] = "".toCharArray // do not store passwords in code, read them from somewhere safe!
 
   val ks: KeyStore = KeyStore.getInstance("PKCS12")
   val keystore: InputStream = getClass.getClassLoader.getResourceAsStream("mazikeen.ml.p12")
